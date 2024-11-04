@@ -604,6 +604,8 @@ dio_output(rpl_instance_t *instance, uip_ipaddr_t *uc_addr)
     pos += 4;
     memcpy(&buffer[pos], &dag->prefix_info.prefix, 16);
     pos += 16;
+    // Junk comment to trigger workflows?
+    // blah blah
     LOG_DBG("Sending prefix info in DIO for ");
     LOG_DBG_6ADDR(&dag->prefix_info.prefix);
     LOG_DBG_("\n");
