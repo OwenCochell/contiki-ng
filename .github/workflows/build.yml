@@ -85,7 +85,7 @@ jobs:
         brew install coreutils make mosquitto mtr rlwrap
         # Doxygen version needs to be in sync with Doxyfile.
         wget https://github.com/Homebrew/homebrew-core/raw/f434ee2dce9ae11b27d7450a7cfb7af775a47719/Formula/d/doxygen.rb
-        brew install doxygen.rb
+        brew install $(pwd)/doxygen.rb
         rm doxygen.rb
         python3 -m pip -q install matplotlib
         python3 -m pip -q install -r tools/docker/files/rtd_requirements.txt
