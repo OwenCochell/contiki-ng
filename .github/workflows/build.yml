@@ -82,6 +82,9 @@ jobs:
     - name: install macOS software
       if: matrix.os == 'macos-13'
       run: |
+        # Create virtual environment
+        python3.11 -m venv venv
+        source venv/bin/activate
         # Update python alias to point to older version
         alias python3='/usr/local/bin/python3.11'
         alias python='/isr/local/bin/python3.11'
